@@ -3,7 +3,6 @@ const { BrowserWindow, ipcMain } = require("electron");
 class WindowNotification {
   constructor(options) {
     this.options = options;
-    console.log(JSON.stringify(this.options));
     this.window = null;
   }
 
@@ -15,7 +14,6 @@ class WindowNotification {
 
     // 动态计算窗口高度
     const windowHeight = this.calculateHeight();
-    console.log("======>", windowHeight);
 
     // 创建通知窗口
     this.window = new BrowserWindow({
